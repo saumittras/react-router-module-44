@@ -5,11 +5,23 @@ import "./index.css";
 import App from "./App.jsx";
 import Home from "./Components/Home/Home.jsx";
 import Header from "./Components/Home/Header.jsx";
+import About from "./Components/About/About.jsx";
+import Contact from "./Components/Contact/Contact.jsx";
 
 const router = new createBrowserRouter([
   {
     path: "/",
     element: <Home></Home>,
+    children: [
+      {
+        path: "/about",
+        element: <About></About>,
+      },
+      {
+        path: "contact",
+        element: <Contact></Contact>,
+      },
+    ],
   },
   {
     path: "header",
